@@ -1,0 +1,21 @@
+.mat-input-element {
+    color: #585858;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .mat-form-field-invalid.ng-invalid .mat-icon {
+    color: red;
+  }
+  
+  .mat-form-field .mat-icon {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    color: #0000008a;
+    transition: 0.2s;
+  }
+  
