@@ -1,0 +1,64 @@
+<div [formGroup]="parentForm" *ngIf="parentForm">
+    <ng-container [formGroupName]="groupName" *ngIf="groupName && !arrayName">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ label }}</mat-label>
+        <input
+          *ngIf="type !== 'number'"
+          [type]="type"
+          matInput
+          [formControlName]="controlName"
+        />
+        <input
+          *ngIf="type === 'number'"
+          type="number"
+          matInput
+          [formControlName]="controlName"
+        />
+        <mat-icon *ngIf="icon" matSuffix>{{ icon }}</mat-icon>
+        <mat-error> {{ label }} é <strong>obrigatório</strong> </mat-error>
+      </mat-form-field>
+    </ng-container>
+    <ng-container *ngIf="!groupName && !arrayName">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ label }}</mat-label>
+        <input
+          *ngIf="type !== 'number'"
+          [type]="type"
+          matInput
+          [formControlName]="controlName"
+        />
+        <input
+          *ngIf="type === 'number'"
+          type="number"
+          matInput
+          [formControlName]="controlName"
+        />
+        <mat-icon *ngIf="icon" matSuffix>{{ icon }}</mat-icon>
+        <mat-error> {{ label }} é <strong>obrigatório</strong> </mat-error>
+      </mat-form-field>
+    </ng-container>
+    <ng-container *ngIf="arrayName">
+      <ng-container [formArrayName]="arrayName">
+        <div [formGroupName]="groupName">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ label }}</mat-label>
+            <input
+              *ngIf="type !== 'number'"
+              [type]="type"
+              matInput
+              [formControlName]="controlName"
+            />
+            <input
+              *ngIf="type === 'number'"
+              type="number"
+              matInput
+              [formControlName]="controlName"
+            />
+            <mat-icon *ngIf="icon" matSuffix>{{ icon }}</mat-icon>
+            <mat-error> {{ label }} é <strong>obrigatório</strong> </mat-error>
+          </mat-form-field>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+  

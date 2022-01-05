@@ -1,0 +1,32 @@
+<div class="modal-edit-contact">
+    <div class="header">
+      <i class="fas fa-times-circle fa-lg" [mat-dialog-close]="true"></i>
+    </div>
+  
+    <form>
+      <app-input
+        [parentForm]="form"
+        label="Primeiro Nome"
+        controlName="firstname"
+        type="text"
+      ></app-input>
+      <app-input
+        [parentForm]="form"
+        label="Ultimo Nome"
+        controlName="lastname"
+        type="text"
+      ></app-input>  
+      <app-input
+        [parentForm]="form"
+        label="Email"
+        controlName="email"
+        type="text"
+      ></app-input>
+
+      <div class="foot">
+        <button  mat-stroked-button type="button" (click)="closeModal()" class="sm">Cancelar</button>
+        <button  mat-raised-button  type="button"  (click)="editContact(this.data.id, this.form.value)" class="sm">Salvar</button>
+      </div>
+    </form>
+  </div>
+  

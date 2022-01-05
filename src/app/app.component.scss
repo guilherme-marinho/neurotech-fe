@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+  }
+
+  .mat-column-dots {
+    text-align: end;
+  }
+
+  .mat-menu-trigger{
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+form{
+  width: 100%
+}
+
+.contact, .foot{
+  margin: 30px 0 30px 0;
+  display: flex;
+  justify-content: center;
+
+}
+button{
+  cursor: pointer;
+  font-size: 14px;
+  height: 50px;
+  width: 300px;
+  border-radius: 5px;
+  text-align: center;
+  border:none;
+  i{
+    margin-right: 10px;
+  }
+}
